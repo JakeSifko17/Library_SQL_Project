@@ -70,6 +70,19 @@ CREATE TABLE Periodical_Copy
 				PCopyNum NUMBER(1),
 					PAvailable VARCHAR2(1)
 								);
+
+ALTER TABLE Book
+ADD PRIMARY KEY (BCallNum);
+ALTER TABLE Periodical
+ADD PRIMARY KEY (PCallNum);
+ALTER TABLE Article
+ADD PRIMARY KEY (PCallNum);
+ALTER TABLE Author
+ADD PRIMARY KEY (Author_ID);
+ALTER TABLE Writes_Books
+ADD PRIMARY KEY (BCallNum);
+
+
 INSERT INTO Publisher
 VALUES (‘Addison- Wesley’, ‘Reading’, ‘MA’);
 INSERT INTO Publisher
@@ -462,5 +475,3 @@ INSERT INTO Periodical_Copy
 Values (‘QA 76.27.I534’, ‘9’, ‘4’, ‘1’, ‘N’);
 INSERT INTO Periodical_Copy
 Values (‘QA 76.27.I534’, ‘9’, ‘4’, ‘2’, ‘Y’);
-
-
